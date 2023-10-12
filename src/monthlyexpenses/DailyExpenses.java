@@ -23,7 +23,7 @@ public class DailyExpenses{
     public void totalExpense(List<Expense> expense) {
         double total = 0;
         for (Expense expenses : expense) {
-            total += expenses.amount;
+            total += expenses.amount();
         }
 
         if (total > max) {
@@ -36,7 +36,7 @@ public class DailyExpenses{
     public double calculateTotalExpenses() {
         double total = 0;
         for (Expense expenses : expenses) {
-            total += expenses.amount;
+            total += expenses.amount();
         }
         return total;
     }
