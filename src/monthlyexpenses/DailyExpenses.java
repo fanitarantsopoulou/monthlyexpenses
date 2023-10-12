@@ -4,26 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DailyExpenses{
-    private List<Expenses> expense;
+    private List<Expense> expenses;
     private final double max;
 
     public DailyExpenses() {
-        expense = new ArrayList<>();
+        expenses = new ArrayList<>();
         max = 0;
     }
 
-    public void addExpense(Expenses expenses) {
-        expense.add(expenses);
+    public void addExpense(Expense expenses) {
+        this.expenses.add(expenses);
     }
 
-    public void setExpense(List<Expenses> expense) {
-        this.expense = expense;
+    public void setExpenses(List<Expense> expenses) {
+        this.expenses = expenses;
     }
 
-    public void totalExpense(List<Expenses> expense) {
+    public void totalExpense(List<Expense> expense) {
         double total = 0;
-        for (Expenses expenses : expense) {
-            total += expenses.getAmount();
+        for (Expense expenses : expense) {
+            total += expenses.amount();
         }
 
         if (total > max) {
@@ -35,8 +35,8 @@ public class DailyExpenses{
 
     public double calculateTotalExpenses() {
         double total = 0;
-        for (Expenses expenses : expense) {
-            total += expenses.getAmount();
+        for (Expense expenses : expenses) {
+            total += expenses.amount();
         }
         return total;
     }
