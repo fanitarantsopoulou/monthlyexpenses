@@ -7,7 +7,6 @@ public class Expense {
     private String day;
     private String description;
     private double amount;
-    private double total = 0;
 
     // Constructor
     public Expense(String month, String day, String description, double amount) {
@@ -58,10 +57,5 @@ public class Expense {
                 ", description='" + description + '\'' +
                 ", amount=" + amount +
                 '}';
-    }
-
-    public double totalExpenses(double amount) {
-        total += amount;
-        return total;
     }
 }
