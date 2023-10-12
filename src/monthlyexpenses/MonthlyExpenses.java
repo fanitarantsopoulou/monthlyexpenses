@@ -23,7 +23,7 @@ public class MonthlyExpenses {
             System.out.print("Pleas enter the expense amount: ");
             double amount=in.nextDouble();
   
- Expenses expense = new Expenses(month, day, description, amount);
+ Expense expense = new Expense(month, day, description, amount);
             e.addExpense(expense);
             System.out.print("Do you want to add more expenses? (yes/no): ");
             String moreExpenses = in.nextLine().toLowerCase();

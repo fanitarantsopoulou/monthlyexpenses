@@ -1,6 +1,6 @@
 package monthlyexpenses;
 
-public class Expenses {
+public class Expense {
 
     // Declaration of variables
     private String month;
@@ -10,7 +10,7 @@ public class Expenses {
     private double total = 0;
 
     // Constructor
-    public Expenses(String month, String day, String description, double amount) {
+    public Expense(String month, String day, String description, double amount) {
         this.month = month;
         this.day = day;
         this.description = description;
